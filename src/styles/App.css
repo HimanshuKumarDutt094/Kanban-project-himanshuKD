@@ -1,0 +1,75 @@
+.App,
+.html {
+	background-color: rgb(185, 185, 185);
+}
+
+.kanban-board {
+	display: flex;
+	flex-flow: row wrap;
+}
+.ticket-card {
+	background-color: aliceblue;
+	width: fit-content;
+	flex-flow: column wrap;
+	border: 2px solid #000;
+	display: flex;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 0.7em;
+}
+.card-id {
+	margin-bottom: 2px;
+	color: #a39393;
+}
+
+.card-priority {
+	margin: 2px;
+	border: 1px solid #000;
+	width: fit-content;
+	height: fit-content;
+	border-radius: 0.5em;
+}
+.hidden {
+	display: none;
+}
+.visible {
+	display: block;
+}
+
+.card-grp {
+	display: flex;
+	flex-flow: row;
+	justify-items: flex-end;
+}
+.card-status {
+	border-radius: 0.5em;
+	margin: 2px;
+	border: 1px solid #000;
+	width: fit-content;
+	height: fit-content;
+}
+
+.filter-bar {
+	position: absolute; /* Position the filter bar absolutely */
+	background: rgb(206, 204, 204); /* Set background color */
+	z-index: 1000;
+	border: 2px solid #000;
+	border-radius: 0.6em;
+	flex-flow: column nowrap;
+	height: fit-content;
+	width: 240px;
+}
+.grouping {
+	flex-flow: row nowrap;
+	display: flex;
+	justify-content: space-around;
+
+	margin-top: 0.7em;
+}
+.ordering {
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+	flex-flow: row nowrap;
+	display: flex;
+	justify-content: space-around;
+}
