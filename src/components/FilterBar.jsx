@@ -11,9 +11,15 @@ function FilterBar({ onGroupingChange, onSortingChange }) {
 	return (
 		<div className="filter">
 			<div className="menu" onClick={toggleFilterBar}>
-				<select>
-					<option value="">Display</option>
-				</select>
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/149/149267.png"
+					alt="img"
+				/>{" "}
+				&nbsp; Display &nbsp;
+				<img
+					src="https://cdn-icons-png.flaticon.com/128/2722/2722987.png"
+					alt=""
+				/>
 			</div>
 
 			<div className={`filter-bar ${filterBarVisible ? "visible" : "hidden"}`}>
@@ -21,7 +27,7 @@ function FilterBar({ onGroupingChange, onSortingChange }) {
 					<div>
 						<label htmlFor="grouping-select">Grouping </label>
 					</div>
-					<div>
+					<div className="grouping-values">
 						<select
 							id="grouping-select"
 							onChange={(e) => onGroupingChange(e.target.value)}
@@ -33,14 +39,18 @@ function FilterBar({ onGroupingChange, onSortingChange }) {
 					</div>
 				</div>
 				<div className="ordering">
-					<label htmlFor="sorting-select">Ordering </label>
-					<select
-						id="sorting-select"
-						onChange={(e) => onSortingChange(e.target.value)}
-					>
-						<option value="priority">Priority</option>
-						<option value="title">Title</option>
-					</select>
+					<div>
+						<label htmlFor="sorting-select">Ordering </label>
+					</div>
+					<div className="ordering-values">
+						<select
+							id="sorting-select"
+							onChange={(e) => onSortingChange(e.target.value)}
+						>
+							<option value="priority">Priority</option>
+							<option value="title">Title</option>
+						</select>
+					</div>
 				</div>
 			</div>
 		</div>
